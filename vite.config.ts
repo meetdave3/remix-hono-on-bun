@@ -1,6 +1,8 @@
 import { vitePlugin as remix } from "@remix-run/dev";
 import { defineConfig } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
+import devServer, { defaultOptions } from '@hono/vite-dev-server'
+import adapter from '@hono/vite-dev-server/bun'
 
 declare module "@remix-run/node" {
   interface Future {
@@ -9,6 +11,9 @@ declare module "@remix-run/node" {
 }
 
 export default defineConfig({
+  server: {
+    port: 3000,
+  },
   plugins: [
     remix({
       future: {
@@ -20,5 +25,11 @@ export default defineConfig({
       },
     }),
     tsconfigPaths(),
+    devServer({
+      adapter,
+      entry: './server.ts',
+      exclude: [...defaultOptions.exclude, '/assets/**', '/app/**'],
+      injectClientScript: false
+    })
   ],
 });
