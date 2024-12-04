@@ -1,0 +1,36 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "bun",
+      "request": "launch",
+      "name": "Debug Bun Dev Server",
+      "program": "${workspaceFolder}/node_modules/vite/bin/vite.js",
+      "args": ["--port", "3000"],
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "NODE_ENV": "development"
+      },
+      "stopOnEntry": false
+    },
+    {
+      "type": "bun",
+      "request": "attach",
+      "name": "Attach to Bun Process",
+      "processId": "${command:PickProcess}"
+    },
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "Debug in Chrome",
+      "url": "http://localhost:3000",
+      "webRoot": "${workspaceFolder}"
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Debug Full Stack",
+      "configurations": ["Debug Bun Dev Server", "Debug in Chrome"]
+    }
+  ]
+}
