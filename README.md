@@ -1,6 +1,6 @@
 # bun-hono-remix (beta) 🚀
 
-Free from the constraints of serverless architectures, rising from the realms of Node.js and leaving behind the legendary Express middleware, emerges a Remix application, flourishing on the Bun runtime, using the lightweight and futuristic Hono middleware, serving the world wide web with greater will from it's even tinier server.
+Free from the constraints of serverless architectures, rising from the realms of Node.js and leaving behind the legendary Express middleware, emerges a Remix application, flourishing on the Bun runtime, riding on the lightweight and futuristic Hono middleware, serving the world wide web with greater will from it's even tinier server.
 
 Includes the following configuration:
 
@@ -10,21 +10,13 @@ Includes the following configuration:
 - Vite v6
 - Prettier
 - ESlint
-- React 18.3.1
+- React 18.3
 - Tailwind CSS
-- Docker (production-ready image size ~79MB)
+- Production ready Docker (image size ~79mb)
 - Fly.io (deploy at ~$2 per month)
-- Quick deploys with GitHub Actions (usually deploys in <1m)
+- Quick deploys with GitHub Actions (avg. duration ~35s)
 - Vite HMR + Watch Bun server with one script
 - Launch & debug dev server with "Bun for Visual Studio Code" extension
-
-Future ideas
-
-- Drizzle ORM + Bun's sqlite driver + Fly volume
-- Optimistic todo app
-- Serve a Websocket connection to the Remix app from the Bun server
-- Deploy Remix app in SPA mode with Cloudflare CDN configuration
-- DNS prefetch + caching using Bun for serverside API fetch calls
 
 ## Development
 
@@ -70,7 +62,7 @@ Deploy the Bun app using the production-ready Dockerfile 🐳 on Fly.io with:
 fly launch
 ```
 
-Works fine with the bare minimum machine configuration (shared-cpu-1x / 256mb RAM). Uses <100mb memory footprint on an idle server.
+Works fine with the bare minimum machine configuration (shared-cpu-1x / 256mb RAM). Less than 100mb memory footprint.
 
 ## Styling
 
