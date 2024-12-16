@@ -5,14 +5,14 @@
     "build": "react-router build",
     "postbuild": "sed -i.bak 's/\"react-dom\\/server\"/\"react-dom\\/server.node\"/' build/server/index.js && rm -f build/server/index.js.bak",
     "dev": "bunx --bun vite",
+    "lint": "eslint --ignore-path .gitignore --cache --cache-location ./node_modules/.cache/eslint .",
     "start": "bun run server.ts",
-    "typecheck": "react-router typegen && tsc",
-    "lint": "eslint --ignore-path .gitignore --cache --cache-location ./node_modules/.cache/eslint ."
+    "typecheck": "react-router typegen && tsc"
   },
   "dependencies": {
+    "@react-router/fs-routes": "^7.0.2",
     "@react-router/node": "^7.0.2",
     "@react-router/serve": "^7.0.2",
-    "@react-router/fs-routes": "^7.0.2",
     "hono": "^4.1.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
