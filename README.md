@@ -12,9 +12,9 @@ Includes the following configuration:
 - Prettier
 - ESlint
 - Tailwind CSS
-- Production ready Docker (image size ~79mb)
+- Production ready Docker (image size ~88mb)
 - Fly.io (deploy at ~$2 per month)
-- Quick deploys with GitHub Actions (avg. duration ~35s)
+- Quick deploys with GitHub Actions (usually deploys in less than a minute)
 - Vite HMR + Watch Bun server with one script
 - Launch & debug dev server with "Bun for Visual Studio Code" extension
 
