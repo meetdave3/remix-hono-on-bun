@@ -1,16 +1,16 @@
-# bun-hono-remix (beta) 🚀
+# bun-hono-react19-rr7 (beta) 🚀
 
-Free from the constraints of serverless architectures, rising from the realms of Node.js and leaving behind the legendary Express middleware, emerges a Remix application, flourishing on the Bun runtime, riding on the lightweight and futuristic Hono middleware, serving the world wide web with greater will from it's even tinier server.
+Free from the constraints of serverless architectures, rising from the realms of Node.js and leaving behind the legendary Express middleware, emerges a Remix application in the form of a React Router application, flourishing on the Bun runtime, riding on the lightweight and futuristic Hono middleware, serving the world wide web with greater will from it's even tinier server.
 
 Includes the following configuration:
 
-- Remix v2.15
+- React 19
+- React Router 7
 - Bun runtime + Bun server
 - Hono v4 middleware
 - Vite v6
 - Prettier
 - ESlint
-- React 18.3
 - Tailwind CSS
 - Production ready Docker (image size ~79mb)
 - Fly.io (deploy at ~$2 per month)

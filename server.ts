@@ -1,6 +1,6 @@
 import { Hono } from "hono";
 import { Serve } from "bun";
-import { ServerBuild } from "@remix-run/node";
+import { ServerBuild } from "react-router";
 import { serveStatic } from "hono/bun";
 import * as build from "./build/server/index";
 import { remix } from "./handler";
@@ -12,7 +12,7 @@ server.use("*", serveStatic({ root: "./build/client/" }));
 let finalBuild: ServerBuild = build as unknown as ServerBuild;
 
 if (process.env.NODE_ENV === "development") {
-  finalBuild = await import('virtual:remix/server-build') 
+  finalBuild = await import("virtual:react-router/server-build") 
 }
 
 server.use(
