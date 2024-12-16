@@ -5,15 +5,16 @@
   "type": "module",
   "scripts": {
     "build": "react-router build",
+    "postbuild": "sed -i.bak 's/\"react-dom\\/server\"/\"react-dom\\/server.node\"/' build/server/index.js && rm -f build/server/index.js.bak",
     "dev": "bunx --bun vite",
     "start": "bun run server.ts",
     "typecheck": "react-router typegen && tsc",
     "lint": "eslint --ignore-path .gitignore --cache --cache-location ./node_modules/.cache/eslint ."
   },
   "dependencies": {
-    "@react-router/node": "^7.0.0",
-    "@react-router/serve": "^7.0.0",
-    "@react-router/fs-routes": "^7.0.0",
+    "@react-router/node": "^7.0.2",
+    "@react-router/serve": "^7.0.2",
+    "@react-router/fs-routes": "^7.0.2",
     "hono": "^4.1.0",
     "isbot": "^4.1.0",
     "react": "^19.0.0",
@@ -22,10 +23,10 @@
   },
   "devDependencies": {
     "@hono/vite-dev-server": "^0.17.0",
-    "@react-router/dev": "^7.0.0",
+    "@react-router/dev": "^7.0.2",
     "@types/bun": "^1.1.14",
-    "@types/react": "^18.3.12",
-    "@types/react-dom": "^18.3.1",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.2",
     "@typescript-eslint/eslint-plugin": "^6.7.4",
     "@typescript-eslint/parser": "^6.7.4",
     "autoprefixer": "^10.4.19",
@@ -40,8 +41,5 @@
     "typescript": "^5.1.6",
     "vite": "^6.0.2",
     "vite-tsconfig-paths": "^4.2.1"
-  },
-  "engines": {
-    "node": ">=20.0.0"
   }
 }
