@@ -3,7 +3,6 @@
   "type": "module",
   "scripts": {
     "build": "react-router build",
-    "postbuild": "sed -i.bak 's/\"react-dom\\/server\"/\"react-dom\\/server.node\"/' build/server/index.js && rm -f build/server/index.js.bak",
     "dev": "bunx --bun vite",
     "lint": "eslint --ignore-path .gitignore --cache --cache-location ./node_modules/.cache/eslint .",
     "start": "bun run server.ts",
