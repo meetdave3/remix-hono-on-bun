@@ -18,4 +18,9 @@ export default defineConfig({
       injectClientScript: false
     })
   ],
+  resolve: {
+		alias: {
+			'react-dom/server': 'react-dom/server.node',
+		},
+	},
 });
